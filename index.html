@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan Simple</title>
+</head>
+<body>
+
+    <p>Masukkan Angka:</p>
+    <input type="number" id="inputUser">
+    <button onclick="tampilkanHasil()">Proses</button>
+    
+    <hr>
+    
+    <div id="tampilan"></div>
+
+    <script>
+        function tampilkanHasil() {
+          
+            var batas = document.getElementById("inputUser").value;
+            var hasil = ""; 
+
+          
+            for (var i = 1; i <= batas; i++) {
+                
+              
+                if (i % 15 == 0) {
+                    hasil += "WEB <br>";
+                } 
+                else if (i % 3 == 0) {
+                    hasil += "TI <br>";
+                } 
+                else if (i % 5 == 0) {
+                    hasil += "Unindra <br>";
+                } 
+                else {
+                    hasil += i + " <br>";
+                }
+            }
+
+     
+            document.getElementById("tampilan").innerHTML = hasil;
+        }
+    </script>
+
+</body>
+</html>
